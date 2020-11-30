@@ -10,6 +10,9 @@ import java.util.List;
 
 public interface Userservice {
 
+    //获取所有的用户表信息
     List<User> getAllUsers();
 
+    void  InsertUser(User user);
+    void  updateUser( String a );
 }

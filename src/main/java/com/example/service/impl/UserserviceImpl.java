@@ -8,16 +8,24 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service    //实现类注入即可
 public class UserserviceImpl implements Userservice {
 
 
     @Autowired
     UserMapper userMapper;
 
-
-
     public List<User> getAllUsers(){
             return userMapper.getAllUsers();
     }
+
+    public void  InsertUser(User user)
+    {
+        userMapper.InsertUser(user);
+    }
+
+    public void  updateUser( String a ){
+        userMapper.updateUser(a);
+    }
+
 }
